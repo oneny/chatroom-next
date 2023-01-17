@@ -5,6 +5,9 @@
     "**/*.ts",
     "**/*.tsx"
   ],
+  "compilerOptions": {
+    "jsxImportSource": "@emotion/react",
+  },
   "exclude": [
     "node_modules"
   ]

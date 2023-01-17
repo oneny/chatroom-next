@@ -1,6 +1,9 @@
-import React from 'react';
+import { Global, ThemeProvider } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import React from 'react';
+import reset from 'styles';
+import theme from 'styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,7 +11,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Global styles={reset} />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </React.Fragment>
   );
 }

@@ -1,29 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { BasicCard } from '../components/BasicCard';
-import { TitleCard } from '../components/TitleCard';
-import { HoverableCard } from '../components/HoverableCard';
+import { Sidebar } from 'components';
 
 function Home() {
   return (
     <React.Fragment>
       <Head>
-        <title>Home - Nextron (with-typescript-emotion)</title>
+        <title>ChatApp</title>
       </Head>
-      <div>
-        <TitleCard>Nextron with Emotion</TitleCard>
-        <BasicCard>
-          <Link href="/next">
-            <a>Go to next page</a>
-          </Link>
-        </BasicCard>
-        <HoverableCard>
-          With <code>:hover</code>.
-        </HoverableCard>
-      </div>
+
+      <Sidebar />
     </React.Fragment>
   );
-};
+}
 
 export default Home;
